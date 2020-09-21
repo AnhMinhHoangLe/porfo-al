@@ -1,0 +1,132 @@
+/* EXTRA ABOUT */
+.EXABOUT{
+ display: grid; 
+  border-radius:20px; 
+  background-color: white;
+  color: black;
+   grid-template-areas: "EXABOUT-content       EXABOUT-identity  EXABOUT-identity "
+                        "EXABOUT-content        EXABOUT-ability   EXABOUT-experience"
+                        "EXABOUT-content   EXABOUT-ability   EXABOUT-education"
+                        "EXABOUT-content   EXABOUT-button    EXABOUT-button";
+                        grid-gap: 2%;
+                        margin: 0 2% 2% 2%; 
+                        padding: 2% 2% 2% 2%;
+    grid-template-columns: repeat(auto-fill, minmax( 1fr));
+  align-items: center;
+}
+.EXABOUT-content{
+  grid-area: EXABOUT-content; 
+  padding: 2% 2% 2% 2%;
+    font-size: 20px;
+}
+#EXABOUT-info-ava{
+  height: 420px; 
+  pointer-events: none;
+  filter: grayscale();
+  border-bottom: 2px black solid;
+}
+
+.EXABOUT-info-contact{
+   list-style-type: none;
+}
+.EXABOUT-identity{
+      grid-area: EXABOUT-identity; 
+      
+      
+}
+.EXABOUT-ability{
+        grid-area: EXABOUT-ability; 
+        border-radius: 20px;
+      border: 2px gray solid;
+            text-align: center;
+font-size: 25px;
+    
+}
+.EXABOUT-experience{
+  grid-area: EXABOUT-experience;
+   border-radius: 20px;
+         border: 2px gray solid;
+               text-align: center;
+}
+.EXABOUT-education{
+  grid-area: EXABOUT-education;
+   border-radius: 20px;
+         border: 2px gray solid;
+               text-align: center;
+}
+.EXABOUT-button{
+  grid-area: EXABOUT-button;
+}
+.EXABOUT-button-symbol:hover{
+ transform: scaleY(2);
+}
+.EXABOUT-info-contact li:hover{
+    transform: translate(40px, 0px);
+  }
+.EXABOUT-info-contact li a{
+    text-decoration: none;
+    color: #000000; 
+  }
+  .EXABOUT-experience:hover, .EXABOUT-ability:hover, .EXABOUT-education:hover{
+      box-shadow: 2px 2px 20px gray;
+      border: 0px white solid;
+}
+
+@media only screen and (max-width:900px) {
+ .EXABOUT{
+   display: grid;
+   background-color: black;
+  color: white;
+   grid-template-areas: "EXABOUT-identity  EXABOUT-content "
+                        " EXABOUT-experience EXABOUT-experience"
+                        "EXABOUT-ability EXABOUT-ability"  
+                        "EXABOUT-education EXABOUT-education"
+                        "EXABOUT-button EXABOUT-button"    ;
+          
+}
+#EXABOUT-info-ava{
+  height: 120px; 
+  pointer-events: none;
+  filter: grayscale();
+}
+.EXABOUT-content{
+  display: flex;
+}
+.EXABOUT-info-contact{
+   list-style-type: none;
+   font-size: 10px;
+}
+.EXABOUT-identity{
+  font-size: 12px;
+}
+.EXABOUT-ability{
+      border-radius: 20px;
+      border: 2px gray solid;
+            text-align: center;
+font-size: 12px;
+    
+}
+.EXABOUT-experience{
+  grid-area: EXABOUT-experience;
+   border-radius: 20px;
+         border: 2px gray solid;
+               text-align: center;
+              font-size: 12px; 
+}
+.EXABOUT-education{
+  grid-area: EXABOUT-education;
+  border-radius: 20px;
+  border: 2px gray solid;
+  text-align: center;
+  font-size: 12px; 
+}
+.EXABOUT-button{
+  grid-area: EXABOUT-button;
+  text-align: center;
+}
+
+.EXABOUT-info-contact li a{
+    text-decoration: none;
+    color: white; 
+  }
+}

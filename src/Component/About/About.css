@@ -1,0 +1,92 @@
+.ABOUT{
+  background-color: #100E10; 
+}
+.ABOUT-border-outside, .ABOUT-border-inside{
+  border: 2px #ffffff solid; 
+  border-radius: 10px;
+  color: white; 
+  margin: 5% 3% 0 2%;
+}
+
+.ABOUT-border-inside{
+  display:grid; 
+  padding: 2% 2% 2% 2%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 2px;
+  grid-template-areas: "about-border-inside-left about-border-inside-right " ;
+  margin: 2% 2% 2% 2%;
+}
+
+.ABOUT-border-inside-left{
+  grid-area: about-border-inside-left;
+  justify-self: center;
+  font-size: 25px;
+}
+
+
+.ABOUT-border-inside-left h1{
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+  font-size: 70px;
+}
+
+.ABOUT-border-inside-right {
+    grid-area: about-border-inside-right;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+}
+#ABOUT-border-inside-right-ava{
+  height: 500px ;
+  width: auto; 
+}
+#ABOUT-border-inside-right-ava:hover{
+  transition:all 500ms ease-in;
+ opacity: 0.1;
+}
+.ABOUT-border-inside-right-hi{
+  align-self: center;
+}
+
+@media only screen and (max-width: 750px) {
+
+/* ABOUT  */
+.ABOUT-border-inside{
+  display:grid;
+  grid-template-areas: "ABOUT-border-inside-left ABOUT-border-inside-left"
+                        "ABOUT-border-inside-right ABOUT-border-inside-right";
+   grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+   justify-items: center;
+   text-align: center;
+   align-items: center;
+
+}
+.ABOUT-border-inside-left{
+  grid-area:ABOUT-border-inside-left; 
+  font-size: 25px;
+  justify-items: center;
+
+}
+.ABOUT-border-inside-left h1{
+  font-size: 30px;
+}
+.ABOUT-border-inside-right{
+  grid-area:ABOUT-border-inside-right ;
+  font-size: 20px;
+  justify-self: center;
+
+}
+#ABOUT-border-inside-right-ava:hover{
+  transition:all 500ms ease-in;
+ opacity: 0.1;
+}
+ #ABOUT-border-inside-right-ava{
+    max-height: 300px ;
+    width: auto; 
+}
+/* .ABOUT-border-inside-right-hi{
+  align-self: center;
+} */
+}
