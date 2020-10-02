@@ -1,0 +1,12 @@
+
+.HOME-background-nav{
+  display: flex;
+  justify-content: center;
+}
+#HOME-background-nav-logo{
+  max-height: 60px;
+  width: auto;
+}
+#HOME-background-nav-logo:hover{
+  transform: rotate(0.5turn); 
+}

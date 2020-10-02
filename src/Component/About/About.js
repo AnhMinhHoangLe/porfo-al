@@ -1,14 +1,13 @@
 import React from 'react'
 import "./About.css"
 import ava2 from "./ava2.jpg"
-import { ParallaxLayer } from 'react-spring/renderprops-addons'
-import Fade from 'react-reveal/Fade';
+import Flip from 'react-reveal/Flip';
 
 const About = (({ onChangeInInfo }) => {
         return (
-                <ParallaxLayer offset={1} speed={0} className='ABOUT' >
-                        <Fade right>
+                <Flip bottom>
 
+                        <div className='ABOUT'>
                                 <div className='ABOUT-border-outside'>
                                         <div className='ABOUT-border-inside'>
                                                 <div className='ABOUT-border-inside-left'>
@@ -28,9 +27,10 @@ const About = (({ onChangeInInfo }) => {
                                                 </div>
                                         </div>
                                 </div>
-                        </Fade >
 
-                </ParallaxLayer>
+                        </div>
+                </Flip >
+
 
         )
 })

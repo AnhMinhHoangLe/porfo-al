@@ -7,8 +7,9 @@ import detectface1 from "./detectFace1.png"
 import detectface2 from "./detectFace2.png"
 import colorgenerator from "./gradient.png"
 import "./Project.css"
-import { ParallaxLayer } from 'react-spring/renderprops-addons'
 import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
+
 
 
 class Project extends Component {
@@ -27,21 +28,28 @@ class Project extends Component {
         render() {
                 const { pictureProject } = this.state;
                 return (
-                        <ParallaxLayer offset={3} speed={0} className="PROJECT">
-                                <div className='PROJECT-content'>
+                        <div className="PROJECT">
+                                <Zoom left>
+
                                         <span className='PROJECT-title'>PROJECTS</span>
-                                        <span className='PROJECT-list'>
+                                        <span className='PROJECT-list-1'>
                                                 <ul>
                                                         <li className='PROJECT-subtitle'>TEAMWORK</li>
+
                                                         <li className='PROJECT-list-item' onMouseOver={() => this.onChangePictureProject('todolist')} onMouseLeave={() => this.onChangePictureProject('')}><a href='https://two2do.herokuapp.com/login'>TodoList</a></li>
                                                         <li className='PROJECT-list-item' onMouseOver={() => this.onChangePictureProject('ecommerce')} onMouseLeave={() => this.onChangePictureProject('')}><a href='https://aircart-gs.herokuapp.com/'>E-commerce</a></li>
+                                                </ul>
+                                        </span>
+                                        <span className='PROJECT-list-2'>
+                                                <ul>
                                                         <li className='PROJECT-subtitle'>INDIVIDUAL</li>
                                                         <li className='PROJECT-list-item' onMouseOver={() => this.onChangePictureProject('colorgenerator')} onMouseLeave={() => this.onChangePictureProject('')}><a>Gradient</a></li>
                                                         <li className='PROJECT-list-item' onMouseOver={() => this.onChangePictureProject('detectface')} onMouseLeave={() => this.onChangePictureProject('')}><a href='https://detectionface-otp.herokuapp.com/#0'>DetectFace</a></li>
                                                 </ul>
                                         </span>
+
                                         <span className='PROJECT-brand1'>
-                                                <Fade left ssrFadeout >
+                                                <Fade left>
                                                         {
                                                                 pictureProject === 'todolist' ? (
                                                                         <img className='PROJECT-picture' src={todolist1} alt='' />
@@ -56,8 +64,7 @@ class Project extends Component {
                                                 </Fade>
                                         </span>
                                         <span className='PROJECT-brand2'>
-                                                <Fade right ssrFadeout>
-
+                                                <Fade right>
                                                         {
                                                                 pictureProject === 'todolist' ? (
                                                                         <img className='PROJECT-picture' src={todolist2} alt='' />
@@ -70,13 +77,9 @@ class Project extends Component {
                                                                 ) : (<span></span>)
                                                         }
                                                 </Fade>
-
                                         </span>
-                                </div>
-
-
-
-                        </ParallaxLayer>
+                                </Zoom>
+                        </div>
                 )
         }
 }

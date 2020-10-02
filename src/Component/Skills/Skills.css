@@ -1,26 +1,21 @@
-.particles {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
+
 /* Skill Page */
 
 .SKILL{
  background-image: linear-gradient(90deg, #202226 50%, black 50%);
  display: grid;
- grid-template-columns: 50% 50%;
- justify-items: center;
-align-items: center;
- 
+ grid-template-areas: "SKILL-half-left SKILL-half-right";
+  color: #ffffff;
+  justify-items: center;
+  align-items: center;
 }
 
 .SKILL-half-left{
+  grid-area: SKILL-half-left;
  font-size: 70px;
  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-color: #ffffff;
+
 }
 
 .SKILL-half-left ul, .SKILL-half-right ul{
@@ -31,69 +26,69 @@ align-items: center;
   margin-bottom: 50px;
 }
 .SKILL-half-left ul li:hover{
-  color: white;
-  border-bottom: 2px white solid;
+  border-bottom: 2px #ffffff solid;
   transition: all 1s  ease-in-out;
 }
 
-.SKILL-half-left-title{
-  color: white; 
-}
 .SKILL-half-left-nav{
  font-size: 40px;
 color: gray;
 }
 .SKILL-half-right{
-  color: white;
-}
+  grid-area: SKILL-half-right;
+      justify-self: center;
+      font-size: 30px;
 
+}
 #SKILL-half-right-logo{
   width: 200px;
   opacity: 0.2;
 }
+.SKILL-half-right p{
+    margin-bottom: 25px;
+}
 
-
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 740px){
   /* SKILL */
-/* Skill Page */
-.SKILL{
- background-image: linear-gradient(90deg, #202226 50%, black 50%);
- justify-items: center;
- align-items: center;
-}
 
-.SKILL-half-left{
- font-size: 50px;
- -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: white;
-}
 
-.SKILL-half-left ul, .SKILL-half-right ul{
-  list-style: none;
-  letter-spacing: 3px;
-}
 .SKILL-half-left ul li, .SKILL-half-right ul li{
   margin-bottom: 20px;
 }
-.SKILL-half-left ul li:hover{
-  color: white;
-  border-bottom: 2px white solid;
-  transition: all 1s  ease-in-out;
-}
 
 .SKILL-half-left-title{
-  color: white; 
+   font-size: 50px;
+
 }
 .SKILL-half-left-nav{
  font-size: 25px;
-color: gray;
-}
-.SKILL-half-right{
-  color: white;
-}
-#SKILL-half-right-logo{
-  width: 200px;
-  opacity: 0.2;
 }
 
+#SKILL-half-right-logo{
+  width: 150px;
+}
+.SKILL-half-right h1{
+     font-size: 30px;
+}
+
+}
+@media only screen and (max-width: 364px){
+
+
+.SKILL-half-left-title{
+   font-size: 20px;
+}
+.SKILL-half-left-nav{
+ font-size: 10px;
+}
+.SKILL-half-right{
+   font-size: 10px;
+
+}
+#SKILL-half-right-logo{
+  width: 100px;
+}
+.SKILL-half-right h1{
+     font-size: 20px;
+}
 }

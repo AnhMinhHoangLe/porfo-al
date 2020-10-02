@@ -1,25 +1,9 @@
 import React, { Component } from 'react'
-import logo from "../Home/logo.png"
+import logo from "../Nav/logo.png"
 import "./Skills.css"
-import { ParallaxLayer } from 'react-spring/renderprops-addons'
 import Fade from 'react-reveal/Fade';
-import Particles from 'react-particles-js';
+import Zoom from 'react-reveal/Zoom';
 
-const particles = {
-        particles: {
-                number: {
-                        value: 8000,
-                        density: {
-                                enable: true,
-                                value_area: 3000,
-                        }
-                },
-                color: {
-                        value: "#ffffff"
-                }
-
-        }
-}
 class Skills extends Component {
         constructor() {
                 super();
@@ -36,112 +20,101 @@ class Skills extends Component {
         render() {
                 const backend = ['Python', 'Java', 'SQL', 'JSON', 'Express JS']
                 const frontend = ['HTML', 'CSS', 'JavaScripts', 'Django', 'Flask', 'React JS']
-                const testing = ['Pytest', 'TravisCI', 'Test Cases']
+                const testing = ['Pytest', 'Unit Test', 'Test Cases']
                 const sysadmin = ['Git / Github', 'Linux / Mac']
                 const software = ['Photoshop', 'Adobe Xd', 'Figma', 'Heroku']
 
                 const { routeSkill } = this.state
                 return (
 
-                        <ParallaxLayer offset={2} speed={0} className='SKILL'>
-                                <Particles params={{ particles }} className='particles'/>
+                        <div className='SKILL'>
+                                <Fade bottom>
 
-                                {/* Start Skill page */}
-                                <div div className='SKILL-half-left' >
-                                        <span className='SKILL-half-left-title' onMouseEnter={() => this.onChange('')} ><p>SKILLS</p></span>
-                                        <span className='SKILL-half-left-nav'>
-                                                <ul>
+                                        {/* Start Skill page */}
+                                        <div div className='SKILL-half-left' >
+                                                <span className='SKILL-half-left-title' onMouseEnter={() => this.onChange('')} ><p>SKILLS</p></span>
+                                                <span className='SKILL-half-left-nav'>
+
+                                                        <ul>
 
 
-                                                        <li onMouseEnter={() => this.onChange('backend')} >backend</li>
-                                                        <li onMouseEnter={() => this.onChange('frontend')} >frontend</li>
-                                                        <li onMouseEnter={() => this.onChange('others')} >others</li>
-                                                </ul>
-                                        </span>
+                                                                <li onMouseEnter={() => this.onChange('backend')} >backend</li>
+                                                                <li onMouseEnter={() => this.onChange('frontend')} >frontend</li>
+                                                                <li onMouseEnter={() => this.onChange('others')} >others</li>
+                                                        </ul>
+                                                </span>
 
-                                </div >
+                                        </div >
 
-                                <div className='SKILL-half-right'>
-                                        {
-                                                routeSkill === 'backend' ? (
-                                                        <div className='SKILL-half-right-content'>
+                                        <div className='SKILL-half-right'>
+                                                {
+                                                        routeSkill === 'backend' ? (
+                                                                <div className='SKILL-half-right-content'>
 
-                                                                <ul >
-                                                                        <Fade bottom cascade>
+                                                                        <Zoom cascade>
                                                                                 {
                                                                                         backend.map((value, id) => {
-                                                                                                return <li className={id}>{value}</li>
+                                                                                                return <p className={id}>{value}</p>
                                                                                         })
                                                                                 }
-                                                                        </Fade>
-                                                                </ul>
-                                                        </div>
+                                                                        </Zoom>
+                                                                </div>
 
 
-                                                )
-                                                        : routeSkill === 'frontend' ? (
-                                                                <div className='SKILL-half-right-content' >
-
-                                                                        <ul>
-                                                                                <Fade bottom cascade>
+                                                        )
+                                                                : routeSkill === 'frontend' ? (
+                                                                        <div className='SKILL-half-right-content' >
+                                                                                <Zoom cascade>
                                                                                         {
                                                                                                 frontend.map((value, id) => {
-                                                                                                        return <li className={id}>{value}</li>
+                                                                                                        return <p className={id}>{value}</p>
                                                                                                 })
                                                                                         }
-                                                                                </Fade>
-                                                                        </ul>
-                                                                </div>
-                                                        )
-                                                                : routeSkill === 'others' ? (
-                                                                        <div className='SKILL-half-right-content-others'>
-                                                                                <Fade bottom cascade ssrFadeout>
-                                                                                        <span className='SKILL-half-right-content-item'>
-
-                                                                                                <ul>
-
-                                                                                                        {
-                                                                                                                testing.map((value, id) => {
-                                                                                                                        return <li className={id}>{value}</li>
-                                                                                                                })
-                                                                                                        }
-
-                                                                                                </ul>
-
-                                                                                        </span>
-                                                                                        <span className='SKILL-half-right-content-item '>
-                                                                                                <ul>
-                                                                                                        {
-                                                                                                                sysadmin.map((value, id) => {
-                                                                                                                        return <li className={id}>{value}</li>
-                                                                                                                })
-                                                                                                        }
-                                                                                                </ul>
-                                                                                        </span>
-                                                                                        <span className='SKILL-half-right-content-item'>
-
-                                                                                                <ul >
-                                                                                                        {
-                                                                                                                software.map((value, id) => {
-                                                                                                                        return <li className={id} >{value}</li>
-                                                                                                                })
-                                                                                                        }
-                                                                                                </ul>
-                                                                                        </span>
-                                                                                </Fade>
+                                                                                </Zoom>
                                                                         </div>
                                                                 )
-                                                                        : (
-                                                                                <div>
-                                                                                        <img src={logo} alt="" id='SKILL-half-right-logo' />
-                                                                                        <h1>OTPSENSEI</h1>
+                                                                        : routeSkill === 'others' ? (
+                                                                                <div className='SKILL-half-right-content-others'>
+                                                                                        <Zoom cascade>
+                                                                                                <span className='SKILL-half-right-content-item'>
+                                                                                                        {
+                                                                                                                testing.map((value, id) => {
+                                                                                                                        return <p className={id}>{value}</p>
+                                                                                                                })
+                                                                                                        }
+
+
+                                                                                                </span>
+                                                                                                <span className='SKILL-half-right-content-item '>
+                                                                                                        {
+                                                                                                                sysadmin.map((value, id) => {
+                                                                                                                        return <p className={id}>{value}</p>
+                                                                                                                })
+                                                                                                        }
+                                                                                                </span>
+                                                                                                <span className='SKILL-half-right-content-item'>
+
+                                                                                                        {
+                                                                                                                software.map((value, id) => {
+                                                                                                                        return <p className={id} >{value}</p>
+                                                                                                                })
+                                                                                                        }
+                                                                                                </span>
+                                                                                        </Zoom>
                                                                                 </div>
-
                                                                         )
-                                        }
-                                </div>
+                                                                                : (
+                                                                                        <div>
+                                                                                                <img src={logo} alt="" id='SKILL-half-right-logo' />
+                                                                                                <h1>OTPSENSEI</h1>
+                                                                                        </div>
 
-                        </ParallaxLayer>
+                                                                                )
+                                                }
+                                        </div>
+                                </Fade>
+                        </div>
+
 
                 )
         }

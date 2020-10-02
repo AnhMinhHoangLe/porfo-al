@@ -1,11 +1,14 @@
-.ABOUT{
-  background-color: #100E10; 
-}
+/* .ABOUT{
+   display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2% 2% 2% 2%;
+} */
+
 .ABOUT-border-outside, .ABOUT-border-inside{
   border: 2px #ffffff solid; 
   border-radius: 10px;
-  color: white; 
-  margin: 5% 3% 0 2%;
+  color: #ffffff; 
 }
 
 .ABOUT-border-inside{
@@ -50,9 +53,9 @@
   align-self: center;
 }
 
-@media only screen and (max-width: 750px) {
 
-/* ABOUT  */
+@media only screen and (max-width: 768px) {
+                /* ABOUT  */
 .ABOUT-border-inside{
   display:grid;
   grid-template-areas: "ABOUT-border-inside-left ABOUT-border-inside-left"
@@ -86,7 +89,4 @@
     max-height: 300px ;
     width: auto; 
 }
-/* .ABOUT-border-inside-right-hi{
-  align-self: center;
-} */
-}
+        }

@@ -1,178 +1,32 @@
 
+*, *:after, *:before{
+    overflow-x: hidden;
+}
+
 .APP{
   user-select: none; 
-  margin: 0; 
-  padding: 0; 
   background-color: black;
-    box-sizing: border-box;
 
-}
-/* .particles {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-} */
-
-/* HOME */
-
-  /* TRansition HOME */
-  .example-appear {
-    opacity: 0.01;
-  }
-
-  .example-appear.example-appear-active {
-    opacity: 3;
-    transition: opacity 5s ease-in;
-  }
-
- .HOME{
-    display: grid;
-    grid-template-areas: "HOME-background-nav"
-                "HOME-background-job-brand"
-                "HOME-background-content-title"
-                "HOME-background-content-nameOwner"
-                "Home-scrolling"; 
-    background-image: linear-gradient(180deg, white 40%, black 60%);
-    cursor: default; 
-    columns: #000000;;
-    justify-items: center;
-    text-align: center;
-    align-items: center;
-    grid-template-rows: 0.1fr repeat(auto-fill, minmax(100px, 0.1fr));
-    grid-gap: 2%;
-  }
-.HOME-background{
-  background-color: rgb(0, 0, 0);
-  opacity: 0.5;
-  color: whitesmoke;
-  padding: 1% 1% 1% 1%; 
-}
-#HOME-background-nav{
-  grid-area: HOME-background-nav; 
-  display: flex;
-  justify-content: space-around;
-}
-
-.HOME-background-job-brand{
-  grid-area: HOME-background-job-brand;
-  font-size: 30px;
-}
-.HOME-background-content-title{
-   grid-area: HOME-background-content-title; 
-   font-size: 75px;
-}
-.HOME-background-content-nameOwner{
-  grid-area:HOME-background-content-nameOwner; 
-  display: flex;
-  justify-content: space-around;
-  font-size: 20px;
-}
-
-.Home-scrolling{
-  grid-area: Home-scrolling; 
-  display: flex;
-  justify-content: center;
-}
-
-#HOME-background-nav-logo{
-  height: 50px;
-  width: auto;
-}
-#HOME-background-nav-logo:hover{
-  transform: rotate(0.5turn); 
-}
-
-
-.HOME-background-content-info-info-list:hover{
-  border: 2px white solid;
-}
-
-
-.Home-scrolling-shape{
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: 1px white solid; 
-}
-.Home-scrolling-shape:hover{
-    background-image: linear-gradient(180deg, gray 40%, black 60%);
-    border: none;
-}
-
-
-/* .
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
-
-
-@media only screen and (max-width: 600px) {
-
-
-.HOME-background-job-brand{
-  font-size: 30px;
-}
-.HOME-background-content-title{
   
-   font-size: 60px;
 }
-.HOME-background-content-nameOwner{
-  font-size: 14px;
+.pll{
+    min-height: 100vh; 
 }
-
-#HOME-background-nav-logo{
-  height: 50px;
-  width: auto;
+.pll-1{
+    display:grid;
+    background-image: linear-gradient(180deg, white 40%, black 60%);
+    cursor: default; 
 }
-#HOME-background-nav-logo:hover{
-  transform: rotate(0.5turn); 
-}
-.HOME-background-content-info-info-list:hover{
-  border: 2px#ffffff solid;
+.pll-2, .pll-3, .pll-4{
+  display:grid;
+  align-content: center;
+  padding: 2% 2% 2% 2%; 
 }
 
-.Home-scrolling-shape{
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  border: 1px #ffffff solid; 
-}
-.Home-scrolling-shape:hover{
-    background-image: linear-gradient(180deg, gray 40%, black 60%);
-    border: none;
-}
-
-
-
+.pll-3{
+ background-image: linear-gradient(90deg, #202226 50%, black 50%);
+ display: grid;
+ align-items: center;
 }

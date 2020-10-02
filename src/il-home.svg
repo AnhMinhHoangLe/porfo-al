@@ -1,7 +1,7 @@
 
-<svg width="700" height="600" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg"  >
-        <style>
-        @keyframes cloud{
+<svg  viewBox="0 0 1000 1000"  xmlns="http://www.w3.org/2000/svg"  fill='none'>
+<style>
+  @keyframes cloud{
         0%   {  transform:translate(20px); }
         50%{
                 transform:translate(40px);
@@ -48,7 +48,7 @@
                 animation:birds 5s infinite; 
                 visibility: hidden;
         }
-        </style>
+</style>
 <g id="day-farm">
 <g id="left-house">
 <path id="XMLID 124" d="M287.3 560L284.7 447H179.7L177.1 560L173.3 726H291.1L287.3 560Z" fill="#F03A47"/>

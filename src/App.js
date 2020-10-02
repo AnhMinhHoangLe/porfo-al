@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import './App.css'
-import ilHome from "./il-home.svg"
+import ilHome from './il-home.svg';
 import Home from "./Component/Home/Home"
+import { GiClick } from "react-icons/gi";
 
 
 const initialState = {
         route: "Home",
-
 }
+
+
 class App extends Component {
         constructor() {
                 super();
@@ -23,25 +25,20 @@ class App extends Component {
         render() {
                 const { route } = this.state
                 return (
-                        <div>
+                        <div className='app'>
                                 {
                                         route === 'Home' ?
                                                 (
                                                         <div className='svg'>
-                                                                <span className='svg-card'>
-                                                                        <object type="image/svg+xml" data={ilHome}>
-                                                                        </object>
-                                                                </span>
+                                                                <img src={ilHome} className='svg-card' alt='ilHome' />
 
-                                                                <span className='welcome'>
-                                                                        <p className='welcome-p' onClick={() => this.onRouteChange("About")} >WELCOME</p>
-                                                                </span >
+                                                                <p className='welcome-p' onClick={() => this.onRouteChange("About")} > WELCOME <GiClick /></p>
                                                         </div >
                                                 ) : (
-                                                        
+                                                        <div>
 
                                                                 <Home onRouteChange={this.onRouteChange} />
-
+                                                        </div>
 
 
 

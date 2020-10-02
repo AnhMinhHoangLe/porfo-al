@@ -1,132 +1,151 @@
 /* EXTRA ABOUT */
 .EXABOUT{
- display: grid; 
+  display: grid; 
   border-radius:20px; 
-  background-color: white;
-  color: black;
-   grid-template-areas: "EXABOUT-content       EXABOUT-identity  EXABOUT-identity "
-                        "EXABOUT-content        EXABOUT-ability   EXABOUT-experience"
-                        "EXABOUT-content   EXABOUT-ability   EXABOUT-education"
-                        "EXABOUT-content   EXABOUT-button    EXABOUT-button";
-                        grid-gap: 2%;
-                        margin: 0 2% 2% 2%; 
-                        padding: 2% 2% 2% 2%;
-    grid-template-columns: repeat(auto-fill, minmax( 1fr));
-  align-items: center;
+  padding: 2% 2% 3% 2%;
+  overflow: hidden;
 }
 .EXABOUT-content{
   grid-area: EXABOUT-content; 
-  padding: 2% 2% 2% 2%;
-    font-size: 20px;
+   display:flex;
+  flex-direction: column;
 }
 #EXABOUT-info-ava{
-  height: 420px; 
   pointer-events: none;
   filter: grayscale();
+  border-bottom: 2px #000000 solid;
+}
+
+.EXABOUT-info-contact{
+   list-style-type: none;
+}
+
+.EXABOUT-info-contact li a{
+    text-decoration: none;
+  }
+
+
+.EXABOUT-ability, .EXABOUT-experience , .EXABOUT-education{
+  border-radius: 20px;
+  border: 2px #000000 solid; 
+  text-align: center;
+  padding: 0 2% 2% 0;
+}
+        
+
+.EXABOUT-identity{
+      grid-area: EXABOUT-identity; 
+}
+.EXABOUT-ability{
+      grid-area: EXABOUT-ability; 
+}
+.EXABOUT-experience{
+  grid-area: EXABOUT-experience;
+
+}
+.EXABOUT-education{
+  grid-area: EXABOUT-education;
+}
+.EXABOUT-button{
+  grid-area: EXABOUT-button;
+  justify-self:center;
+}
+.EXABOUT-button-symbol:hover{
   border-bottom: 2px black solid;
 }
 
-.EXABOUT-info-contact{
-   list-style-type: none;
-}
-.EXABOUT-identity{
-      grid-area: EXABOUT-identity; 
-      
-      
-}
-.EXABOUT-ability{
-        grid-area: EXABOUT-ability; 
-        border-radius: 20px;
-      border: 2px gray solid;
-            text-align: center;
-font-size: 25px;
-    
-}
-.EXABOUT-experience{
-  grid-area: EXABOUT-experience;
-   border-radius: 20px;
-         border: 2px gray solid;
-               text-align: center;
-}
-.EXABOUT-education{
-  grid-area: EXABOUT-education;
-   border-radius: 20px;
-         border: 2px gray solid;
-               text-align: center;
-}
-.EXABOUT-button{
-  grid-area: EXABOUT-button;
-}
-.EXABOUT-button-symbol:hover{
- transform: scaleY(2);
-}
-.EXABOUT-info-contact li:hover{
-    transform: translate(40px, 0px);
-  }
-.EXABOUT-info-contact li a{
-    text-decoration: none;
-    color: #000000; 
-  }
+
   .EXABOUT-experience:hover, .EXABOUT-ability:hover, .EXABOUT-education:hover{
       box-shadow: 2px 2px 20px gray;
-      border: 0px white solid;
+      border: none; 
 }
+ .EXABOUT-title{
+   font-weight: bold;
+ }
+@media only screen and (min-width:220px){
 
-@media only screen and (max-width:900px) {
- .EXABOUT{
-   display: grid;
-   background-color: black;
-  color: white;
-   grid-template-areas: "EXABOUT-identity  EXABOUT-content "
-                        " EXABOUT-experience EXABOUT-experience"
-                        "EXABOUT-ability EXABOUT-ability"  
-                        "EXABOUT-education EXABOUT-education"
-                        "EXABOUT-button EXABOUT-button"    ;
-          
-}
-#EXABOUT-info-ava{
-  height: 120px; 
-  pointer-events: none;
-  filter: grayscale();
+  /* EXTRA ABOUT */
+.EXABOUT{
+  background-color: #ffffff;
+  color: #000000; 
+  grid-template-areas: "EXABOUT-content       EXABOUT-identity    EXABOUT-identity   "
+                        "EXABOUT-content      EXABOUT-ability     EXABOUT-ability"
+                        "EXABOUT-content      EXABOUT-experience  EXABOUT-education"
+                        "EXABOUT-button        EXABOUT-button       EXABOUT-button";
+ grid-gap: 2%; 
+ align-items: center;
 }
 .EXABOUT-content{
-  display: flex;
-}
-.EXABOUT-info-contact{
-   list-style-type: none;
-   font-size: 10px;
-}
-.EXABOUT-identity{
-  font-size: 12px;
-}
-.EXABOUT-ability{
-      border-radius: 20px;
-      border: 2px gray solid;
-            text-align: center;
-font-size: 12px;
+     font-size: 0px;
     
 }
-.EXABOUT-experience{
-  grid-area: EXABOUT-experience;
-   border-radius: 20px;
-         border: 2px gray solid;
-               text-align: center;
-              font-size: 12px; 
-}
-.EXABOUT-education{
-  grid-area: EXABOUT-education;
-  border-radius: 20px;
-  border: 2px gray solid;
-  text-align: center;
-  font-size: 12px; 
-}
-.EXABOUT-button{
-  grid-area: EXABOUT-button;
-  text-align: center;
+.EXABOUT-info-contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .EXABOUT-info-contact li a{
-    text-decoration: none;
-    color: white; 
+    color: #000000; 
+  }
+
+.EXABOUT-ability, .EXABOUT-experience , .EXABOUT-education{
+  font-size: 10px; 
+}
+.EXABOUT-identity{
+      font-size: 10px;
+}
+#EXABOUT-info-ava{
+  height: auto;  
+  width:0; 
+ }
+ .EXABOUT-info-contact li:hover{
+    transform: translate(40px, 0px);
   }
 }
+
+@media only screen and (min-width:538px) {
+
+
+  .EXABOUT-info-contact{
+    font-size: 12px;
+  }
+  .EXABOUT-identity{
+    font-size: 20px;
+  }
+  .EXABOUT-ability, .EXABOUT-experience, .EXABOUT-education{
+    font-size: 15px;
+  }
+  #EXABOUT-info-ava{
+  height: auto;  
+  width: 120px; 
+ }
+}
+@media only screen and (min-width:900px){
+ .EXABOUT-info-contact{
+    font-size: 12px;
+  }
+  .EXABOUT-identity, .EXABOUT-ability, .EXABOUT-experience, .EXABOUT-education{
+    font-size: 20px;
+  }
+  #EXABOUT-info-ava{
+  height: auto;  
+  width: 200px; 
+ }
+
+}
+@media only screen and (min-width:1208px){
+.EXABOUT-info-contact{
+    font-size: 19px;
+  }
+  .EXABOUT-identity, .EXABOUT-ability, .EXABOUT-experience, .EXABOUT-education{
+    font-size: 20px;
+  }
+  #EXABOUT-info-ava{
+  height: auto;  
+  width: 300px; 
+ }
+}
+
+
+
