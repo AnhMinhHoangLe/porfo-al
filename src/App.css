@@ -23,12 +23,10 @@
          display: grid;
          grid-template-areas: "svg-card"
                                 "welcome";
-        grid-template-rows: minmax(1fr, 240px);
+    
         text-align: center;
         justify-content: center;
         align-content: center;
-        height: 100vh;
-
 }
 .svg-card{
         grid-area: svg-card;
